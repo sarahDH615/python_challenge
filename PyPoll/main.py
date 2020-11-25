@@ -4,9 +4,9 @@ import csv
 #setting empty list for holding votes/candidate names
 votes = []
 
-#opening csv file
+#path for csv file
 csvpath = os.path.join("Resources", "election_data.csv")
-
+#opening csv file w/ reader
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
 

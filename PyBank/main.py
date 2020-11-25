@@ -13,9 +13,9 @@ bank_dictionary = {}
 bank_dictionary ["Financial Analysis"] = " "
 
 
-#opening csv file
+#csv file path
 csvpath = os.path.join("Resources", "budget_data.csv")
-
+#opening csv file w/ reader
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
     
