@@ -7,6 +7,7 @@ import csv
 #dictionary entry header
 months = []
 money_made = []
+profit_change_list = []
 max_inc = 0
 max_dec = 0
 bank_dictionary = {}
@@ -29,18 +30,44 @@ with open(csvpath) as csvfile:
         if row[1] == "Profit/Losses":
             continue
         #if not header, append the money to money list
+        #wrap row[1] in integer cast so it can be compared to numerical values
         money_made_int = int(row[1])
         money_made.append(money_made_int)
-        #wrap row[1] in integer cast so it can be compared to numerical values
-        #add money to max_inc/_dec depending on whether they are greater or less than zero/last max value
-        #retrieve row[0] for the current max value
-        if int(row[1]) > max_inc:
-            max_inc = int(row[1])
-            max_inc_month = row[0]
-        if int(row[1]) < max_dec:
-            max_dec = int(row[1])
-            max_dec_month = row[0]
+        
+    #creating variable to hold the length of the money_made list to input into range    
+    list_length = int(len(money_made))
+
+    #creating a for loop over the money_made list, comparing each element with the previous element
+    for x in range(1, list_length):
+        profit_change = money_made[x] - money_made[x-1]
+        #appending the changes in each month's profit to a list
+        profit_change_list.append(profit_change)
     
+    #finding the sum of all the changes in profit (numerator in avg change)   
+    total_change = sum(profit_change_list)
+   
+    #creating another variable to hold the length of the profit_change_list (denominator in avg change)
+    number_of_changes = int(len(profit_change_list)) 
+    
+    #creating a for loop to identify the max_inc and max_dec of profits
+    for y in range(0, number_of_changes):
+        if int(profit_change_list[y]) > max_inc:
+            max_inc = int(profit_change_list[y])
+            #creating value to hold the index of the max value in the profit_change_list
+            maxIindex = y
+        if int(profit_change_list[y]) < max_dec:
+            max_dec = int(profit_change_list[y]) 
+            #creating value to hold the index of the max value in the profit_change_list
+            maxDindex = y
+
+    #adding 1 to max indices because the months list is one entry longer
+    miiforrow = maxIindex + 1
+    mdiforrow = maxDindex + 1
+
+    #variables to hold the months for max values
+    max_inc_month = months[miiforrow]
+    max_dec_month = months[mdiforrow]
+
 
 #print starting info
 print("                   ")
@@ -63,7 +90,7 @@ bank_dictionary ["Net Total"] = net_total
 print(f"Net Total: ${net_total} ")
 
 #calc avg change, round it to 2 decimal places
-avg_change = round((net_total/months_total), 2)
+avg_change = round((total_change/number_of_changes), 2)
 #add entry to dictionary for avg change
 #print avg change
 bank_dictionary ["Average Change"] = avg_change
