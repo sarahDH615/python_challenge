@@ -4,13 +4,13 @@
 main.py (script)
 
 #### Analysis folder
-    pybank_results.csv (text analysis file)
+pybank_results.csv (text analysis file)
 
 ### PyPoll
 main.py (script)
 
 #### Analysis folder
-    pypoll_results.csv (text analysis file)
+pypoll_results.csv (text analysis file)
 
 ### extra
 
@@ -22,9 +22,11 @@ new_employee_data.csv (output of script)
 
 #### pyparagraph
 
+txt_analysis.py (script)
+
 ##### raw data
 paragraph_3.txt (text sample)
 
-txt_analysis.py (script)
+
 
 
