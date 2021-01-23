@@ -1,4 +1,17 @@
-## Contains:
+# python_challenge
+
+### Contains:
+- pybank:
+    - analysis
+    - resources
+    - main.py
+- pypoll
+    - analysis
+    - resources
+    - main.py
+- extra
+    - pyboss
+    - pyparagraph
 
 ### PyBank
 main.py (script)
