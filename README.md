@@ -39,9 +39,14 @@ This project consists of four sub-projects, all using python scripts to analyse 
     - procedure:
         - importing dependencies and source csv
         - finding the goal outputs:
-            - for loop to append months and the amount of money made
-            - for loop to determine profits across each month
-            - variables for total profit over the time period, and number of changes over the time period
-            - for loop to find the maximum increase and decrease in profits over the time period
+            - creating variables for goal outputs: lists to hold month names (months), money made for each month (money_made), profits made each month (profit_change_list); variables, set to zero, for greatest increase/decrease in profits (max_inc, max_dec), and a dictionary (bank_dictionary) to hold all the above variables for eventual output to a csv
+            - for loop to append values to lists months and money_made (towards goals a, b)
+            - for loop on money_made list to determine profits across each month, and append to proft_change_list (towards goal c)
+            - setting the sum of the profit_change_list as the total change in profits (total_change), and the length of the profit_change_list (number_of_changes) (towards goal c)
+            - for loop on profit_change_list to find the maximum increase and decrease in profits over the time period (achieving goals d, e)
         - printing the results to the terminal
-        - outputting the results as a csv    
+            - print statements of variables to appear in the terminal
+            - doing some final analysis within the print statement: taking the length of the months list (achieving goal a), taking the sum of the money_made list (achieving goal b), and dividing total_change by number_of_changes (achieving goal c)
+            - appending variables to bank_dictionary
+        - outputting the results as a csv
+            - for loop to write each key-value pair in bank_dictionary as a row in a csv    
