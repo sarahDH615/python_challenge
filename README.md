@@ -156,4 +156,12 @@ meaning that no specific trigger to recognise the end of the rows of data was ne
 rather than resetting it entirely, the filled lists at the end of the loop could just be used to calculate values for the final candidate.
 
 The majority of the sub-projects also required exporting the results of the analysis to a csv. Two methods were used to attain these results:
-dictionaries (used in pybank and pypoll), and zips (used in pyboss). 
+dictionaries (used in pybank and pypoll), and zips (used in pyboss). In all sub-projects, printing to the terminal is done directly from the lists 
+that become either dictionary values or are zipped together. Using a dictionary requires a bit more work along the way: 
+one must append to a dictionary as values are generated. However, it provides an easily printable object for each key; 
+although, for reasons of style, pypoll and pybank do not print directly from the dictionary, 
+doing so would provide perfectly serviceable printouts of the data analysis. Meanwhile, creating a zip object takes place towards the end of the script, 
+when all the lists have all the necessary data. For simpler projects such as the ones in python_challenge, 
+created zipped objects for csv output is probably the more efficient option. If one were doing a more complex project, however, using a dictionary, 
+which more efficiently calls up information on a key, rather than using a for loop to access information from several lists, 
+it might be more practical to use a dictionary to store, and eventually, output data. 
