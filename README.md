@@ -90,8 +90,33 @@ This project consists of four sub-projects, all using python scripts to analyse 
     - procedure:
         - importing dependencies and source csv (employee_data.csv)
         - finding the goal outputs:
-            - creating variables for goal outputs: lists to hold the employee IDs (empIDlist), employee full names, dates of birth, and Social Security Numbers after being split (name_split, date_split, ssn_split), first and last names of employees (first_name_list, second_name_list), dates in MM/DD/YYY format (date_mdy), edited Social Security Numbers (ssn_starred), and State abbreviations (state_abbrev_list); and a dictionary with the United States State abbreviations (us_state_abbrev) 
-            - for loop to append values to list empIDlist, to split names, dates, and Social Security Numbers, append them to their respective lists (name_split, date_split, ssn_split), edit the values as needed, then append them to final lists (first_name_list, second_name_list, date_mdy, ssn_starred), and look up state names in the us_state_abbrev dictionary, and append abbreviations to the state_abbrev_list
+            - creating variables for goal outputs: lists to hold the employee IDs (empIDlist), 
+            employee full names, dates of birth, and Social Security Numbers after being split 
+            (name_split, date_split, ssn_split), first and last names of employees 
+            (first_name_list, second_name_list), dates in MM/DD/YYY format (date_mdy), 
+            edited Social Security Numbers (ssn_starred), and State abbreviations (state_abbrev_list); 
+            and a dictionary with the United States State abbreviations (us_state_abbrev) 
+            - for loop to append values to list empIDlist, to split names, dates, 
+            and Social Security Numbers, append them to their respective lists 
+            (name_split, date_split, ssn_split), edit the values as needed, then append them to final lists 
+            (first_name_list, second_name_list, date_mdy, ssn_starred), 
+            and look up state names in the us_state_abbrev dictionary, and append abbreviations to the state_abbrev_list
             - zipping the lists together (info_zip) and making a combined list (info_zip_list)
         - outputting the results as a csv
             - using csv.writer to append each item in the info_zip_list as a row in a csv (new_employee_data.csv)      
+
+### Challenges/Points of Interest
+
+All of the sub-projects in this analysis required grouping data, 
+then using for loops to compare rows in the data to determine aggregate values for each group. 
+Another project in this repository, vba_challenge, used for loops within VBA to accomplish a similar purpose. 
+Here, unlike in VBA, the end of rows of data is not followed by empty rows, meaning that a reference to a 'row + 1' 
+cannot be used to capture the last section/row of data. This especially posed a problem in pyelection, where, 
+unless some kind of trigger was used to signal the presence of the final candidate, and the presence of the last row of data, 
+there is the potential for not intaking all of the final candidate's data, or not counting the final candidate at all. 
+This issue was solved with the realisation that, with the ending of the for loop, the lists holding the candidate data would not be cleared, 
+meaning that no specific trigger to recognise the end of the rows of data was necessary; with the small adjustment of leaving the counter at 0, 
+rather than resetting it entirely, the filled lists at the end of the loop could just be used to calculate values for the final candidate.
+
+The majority of the sub-projects also required exporting the results of the analysis to a csv. Two methods were used to attain these results:
+dictionaries (used in pybank and pypoll), and zips (used in pyboss). 
