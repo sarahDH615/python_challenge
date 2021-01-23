@@ -25,11 +25,11 @@
 This project consists of four sub-projects, all using python scripts to analyse a source csv/txt file, print results to the terminal, and (for all save pyparagraph) output a new csv containing the analysis results. 
 - pybank:
     - goal ouput:
-        - 1. total number of months
-        - 2. net total profits/losses
-        - 3. changes in profits/losses
-        - 4. greatest increase in profits, and the date and amount of that occurrence
-        - 5. greatest decrease in profits, and the date and amount of that occurrence
+        1. total number of months
+        2. net total profits/losses
+        3. changes in profits/losses
+        4. greatest increase in profits, and the date and amount of that occurrence
+        5. greatest decrease in profits, and the date and amount of that occurrence
     - procedure:
         - importing dependencies and source csv
         - finding the goal outputs:
