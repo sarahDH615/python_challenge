@@ -9,11 +9,18 @@
     - main.py
 - pypoll
     - analysis
+        - pypoll_results.csv
     - resources
+        - election_data.csv
     - main.py
 - extra
     - pyboss
+        - new_employee_data.csv
+        - pybossconversion.py
     - pyparagraph
+        - raw_data
+            - paragraph_3.txt
+        - txt_analysis.py
 
 ### PyBank
 main.py (script)
