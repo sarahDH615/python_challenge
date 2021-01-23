@@ -32,12 +32,12 @@ This project consists of four sub-projects, all using python scripts to analyse 
 
         c. changes in profits/losses
 
-        d. greatest increase in profits, and the date and amount of that    occurrence
+        d. greatest increase in profits, and the date and amount of that occurrence
 
-        e. greatest decrease in profits, and the date and amount of that    occurrence
+        e. greatest decrease in profits, and the date and amount of that occurrence
 
     - procedure:
-        - importing dependencies and source csv
+        - importing dependencies and source csv (budget_data.csv)
         - finding the goal outputs:
             - creating variables for goal outputs: lists to hold month names (months), money made for each month (money_made), profits made each month (profit_change_list); variables, set to zero, for greatest increase/decrease in profits (max_inc, max_dec), and a dictionary (bank_dictionary) to hold all the above variables for eventual output to a csv
             - for loop to append values to lists months and money_made (towards goals a, b)
@@ -50,3 +50,28 @@ This project consists of four sub-projects, all using python scripts to analyse 
             - appending variables to bank_dictionary
         - outputting the results as a csv
             - for loop to write each key-value pair in bank_dictionary as a row in a csv    
+- pypoll:
+    - goal ouput:
+
+        a. total number of votes
+
+        b. list of candidates voted for
+
+        c. percentage of votes for each candidate
+
+        d. total number of votes for each candidate
+
+        e. winner of election by popular vote
+
+    - procedure:
+        - importing dependencies and source csv (election_data.csv)
+        - finding the goal outputs and printing results to the terminal:
+            - creating variables for goal outputs: list to hold votes/candidate names (votes) and dictionary (election_dictionary) to hold the variables for eventual export to a csv
+            - for loop to append values to list votes (towards all goals)
+            - setting variable total equal to length of the votes list (achieving goal a)
+            - creating counter, a list for holding tuples of candidate data (cand_list), sorting votes list, finding the index length of the votes list, in preparation for another for loop (towards goals b-e)
+            - for loop on votes_sorted list with conditionals to determine where votes_sorted changes from one candidate to another, calculating percentage of votes, number of votes, and candidate name, printing those results to the terminal, and saving them to election_dictionary (towards goals b-d)
+            - finding the data for the last candidate from the filled lists after the close of the for loop (achieving goals b-d)
+            - sorting the tuples in cand_list by values for number of votes to find the greatest share of votes, then assigning the candidate name with the greatest share of votes as the winner (achieving goal e)
+        - outputting the results as a csv
+            - for loop to write each key-value pair in election_dictionary as a row in a csv    
