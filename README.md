@@ -15,11 +15,11 @@
     - main.py (script)
 - extra
     - pyboss
-        - new_employee_data.csv (source data)
+        - new_employee_data.csv (data output)
         - pybossconversion.py (script)
     - pyparagraph
         - raw_data
-            - paragraph_3.txt (source data)
+            - paragraph_3.txt (text sample)
         - txt_analysis.py (script)
 
 ### PyBank
