@@ -2,7 +2,6 @@ import os
 import csv
 
 #variables
-empID = []
 empIDlist = []
 name_split = []
 first_name_list = []
