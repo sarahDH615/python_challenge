@@ -26,15 +26,15 @@ This project consists of four sub-projects, all using python scripts to analyse 
 - pybank:
     - goal ouput:
 
-            a. total number of months
+        a. total number of months
 
-            b. net total profits/losses
+        b. net total profits/losses
 
-            c. changes in profits/losses
+        c. changes in profits/losses
 
-            d. greatest increase in profits, and the date and amount of that    occurrence
-            
-            e. greatest decrease in profits, and the date and amount of that    occurrence
+        d. greatest increase in profits, and the date and amount of that    occurrence
+
+        e. greatest decrease in profits, and the date and amount of that    occurrence
 
     - procedure:
         - importing dependencies and source csv
