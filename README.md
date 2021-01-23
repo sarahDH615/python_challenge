@@ -3,24 +3,24 @@
 ### Contains:
 - pybank:
     - analysis
-        - pybank_results.csv
+        - pybank_results.csv (data output)
     - resources
-        - budget_data.csv
-    - main.py
+        - budget_data.csv (source data)
+    - main.py (script)
 - pypoll
     - analysis
-        - pypoll_results.csv
+        - pypoll_results.csv (data output)
     - resources
-        - election_data.csv
-    - main.py
+        - election_data.csv (source data)
+    - main.py (script)
 - extra
     - pyboss
-        - new_employee_data.csv
-        - pybossconversion.py
+        - new_employee_data.csv (source data)
+        - pybossconversion.py (script)
     - pyparagraph
         - raw_data
-            - paragraph_3.txt
-        - txt_analysis.py
+            - paragraph_3.txt (source data)
+        - txt_analysis.py (script)
 
 ### PyBank
 main.py (script)
@@ -48,7 +48,3 @@ txt_analysis.py (script)
 
 ##### raw data
 paragraph_3.txt (text sample)
-
-
-
-
