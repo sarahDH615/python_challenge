@@ -3,15 +3,11 @@ import csv
 import re
 
 #setting empty list variables
-whole_text = []
-split_into_sentences = []
 letter_count = 0
-words_in_sentence = []
-split_into_words = []
 total_sentence_word_count = 0
 
 #path for csv file
-file = "raw_data/paragraph_3.txt"
+file = "paragraph_3.txt"
 #opening csv file w/ reader
 with open(file, 'r') as text:
     lines = text.read()
