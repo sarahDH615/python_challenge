@@ -1,5 +1,9 @@
 # python_challenge
 
+<p align="center">
+  <img width="850" alt='Calculator and paperclips on paper' src="images/calcPaper.jpg">
+</p>
+
 ### Contains:
 - pybank:
     - analysis
@@ -155,6 +159,9 @@ This issue was solved with the realisation that, with the ending of the for loop
 meaning that no specific trigger to recognise the end of the rows of data was necessary; with the small adjustment of leaving the counter at 0, 
 rather than resetting it entirely, the filled lists at the end of the loop could just be used to calculate values for the final candidate.
 
+![For Loop Start](/images/pypollForLoopStart.png)
+![For Loop End](/images/pypollForLoopEnd.png)
+
 The majority of the sub-projects also required exporting the results of the analysis to a csv. Two methods were used to attain these results:
 dictionaries (used in pybank and pypoll), and zips (used in pyboss). In all sub-projects, printing to the terminal is done directly from the lists 
 that become either dictionary values or are zipped together. Using a dictionary requires a bit more work along the way: 
@@ -165,3 +172,7 @@ when all the lists have all the necessary data. For simpler projects such as the
 created zipped objects for csv output is probably the more efficient option. If one were doing a more complex project, however, using a dictionary, 
 which more efficiently calls up information on a key, rather than using a for loop to access information from several lists, 
 it might be more practical to use a dictionary to store, and eventually, output data. 
+
+![Dictionary for CSV creation](/images/dictForCSV.png)
+![Zip 1 for CSV creation](/images/zip1forCSV.png)
+![Zip 2 for CSV creation](/images/zip2forCSV.png)
