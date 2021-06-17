@@ -111,7 +111,7 @@ with open(csvpath) as csvfile:
     info_zip_list = list(info_zip)
 
     #creating a header row    
-    employee_header = ['Employee ID', 'Name', 'DOB', 'SSN', 'State']
+    employee_header = ['Employee ID', 'First Name' 'Second Name', 'DOB', 'SSN', 'State']
     
     #creating path to output csv
     data_output = os.path.join("new_employee_data.csv")
