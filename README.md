@@ -102,13 +102,13 @@ print results to the terminal (save for pyboss), and (for all save pyparagraph) 
     - goal ouput:
 
         <p align="center">
-        <img width="80%" alt='old pyboss' src="images/pybossOld.png">
+        <img width="100%" alt='old pyboss' src="images/pybossOld.png">
         &nbsp;
 
         <em>Source CSV</em>
-        <img width="80%" alt='new pyboss' src="images/pybossNew.png">
+        <img width="100%" alt='new pyboss' src="images/pybossNew.png">
         &nbsp;
-        
+
         <em>Result CSV</em>
         </p>
 
