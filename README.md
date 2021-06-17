@@ -30,6 +30,8 @@ This project consists of four sub-projects, all using python scripts to analyse 
 print results to the terminal (save for pyboss), and (for all save pyparagraph) output a new csv containing the analysis results. 
 - pybank:
     - goal ouput:
+        
+        ![PyBank output](/images/pybankOutput.png)
 
         a. total number of months
 
@@ -66,6 +68,8 @@ print results to the terminal (save for pyboss), and (for all save pyparagraph) 
 - pypoll:
     - goal ouput:
 
+        ![PyPoll output](/images/pypollOutput.png)
+
         a. total number of votes
 
         b. list of candidates voted for
@@ -97,6 +101,15 @@ print results to the terminal (save for pyboss), and (for all save pyparagraph) 
 - pyboss:
     - goal ouput:
 
+        <p align="center">
+        <img width="600" height="200" src="images/pybossOld.png">
+        <br/>
+        <em>Source CSV</em>
+        <img width="600" height="200" src="images/pybossNew.png">
+        <br/>
+        <em>Result CSV</em>
+        </p>
+
         a. splitting 'Name' column in source csv into 'First Name' and 'Last Name' columns
 
         b. re-formatting birth-date column into MM/DD/YYYY
@@ -125,6 +138,8 @@ print results to the terminal (save for pyboss), and (for all save pyparagraph) 
             - using csv.writer to append each item in the info_zip_list as a row in a csv (new_employee_data.csv)      
 - pyparagraph:
     - goal ouput:
+
+        ![PyParagraph output](/images/pyparaOutput.png)
 
         a. approximate word count
 
